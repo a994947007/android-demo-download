@@ -3,6 +3,10 @@ apply from: 'build-config.gradle'
 
 buildscript {
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/central/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
         google()
         jcenter()
     }
@@ -16,10 +20,10 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
-        mavenCentral()
-        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/central/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
         maven { url 'https://developer.huawei.com/repo/' }
         maven { url "https://jitpack.io" }
         maven {
@@ -39,6 +43,9 @@ allprojects {
             }
             url 'https://packages.aliyun.com/maven/repository/2286124-snapshot-J8DIRD/'
         }
+        google()
+        jcenter()
+        mavenCentral()
     }
 }
 
